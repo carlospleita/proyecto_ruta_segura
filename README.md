@@ -2,6 +2,7 @@
 Proyecto de ejemplo con autenticación simulada, formulario controlado con validación, y protección de rutas según usuario logueado y rol.
 
 # Estructura de carpetas
+```
 src/
 ├── main.jsx
 ├── App.jsx
@@ -18,6 +19,7 @@ src/
     ├── Dashboard.jsx
     ├── Perfil.jsx
     └── NoAutorizado.jsx
+```
 
 # Como correrlo
 ```bash
