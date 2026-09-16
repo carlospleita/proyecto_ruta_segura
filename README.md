@@ -1,16 +1,39 @@
-# React + Vite
+# Rutas seguras, componentes y formularios
+Proyecto de ejemplo con autenticación simulada, formulario controlado con validación, y protección de rutas según usuario logueado y rol.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Estructura de carpetas
+src/
+├── main.jsx
+├── App.jsx
+├── context/
+│   └── AuthContext.jsx
+├── routes/
+│   └── PrivateRoute.jsx
+├── components/
+│   ├── Navbar.jsx
+│   └── CampoTexto.jsx
+└── pages/
+    ├── Home.jsx
+    ├── Login.jsx
+    ├── Dashboard.jsx
+    ├── Perfil.jsx
+    └── NoAutorizado.jsx
 
-Currently, two official plugins are available:
+# Como correrlo
+```bash
+npm create vite@latest mi-app -- --template react
+cd mi-app
+npm install
+npm install react-router-dom
+# reemplazá src/ por los archivos del proyecto
+npm run dev
+```
+Abrí http://localhost:5173 en el navegador.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Usuarios de prueba (demo)
+| Email | Contraseña | Rol |
+|---|---|---|
+| `alumno@curso.com` | `12345678` | student |
+| `admin@curso.com` | `admin123` | admin |
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###

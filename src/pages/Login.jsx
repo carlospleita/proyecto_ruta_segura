@@ -33,7 +33,7 @@ export default function Login() {
         setErrors(validar(nuevosValues));
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         const nuevosErrores = validar(form);
         setErrors(nuevosErrores);
@@ -42,7 +42,7 @@ export default function Login() {
         setEnviando(true);
         setErrorGeneral("");
 
-        const exito = login(form.email, form.password);
+        const exito = await login(form.email, form.password);
         setEnviando(false);
 
         if (exito) {
