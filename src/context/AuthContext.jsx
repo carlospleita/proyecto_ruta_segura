@@ -7,7 +7,8 @@ export const AuthProvider = ({ children }) => {
 
   function login(email, password) {
     if (email && password) {
-        setUser({ email, role: "student" });
+        const role = email.includes("admin") ? "admin" : "student";
+        setUser({ email, role });
         return true;
     }
     return false;
